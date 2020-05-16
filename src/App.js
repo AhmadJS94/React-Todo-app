@@ -5,7 +5,7 @@ import './index.css';
 import todosData from './todosData'
 
 
-class App extends React.Component {
+ export default class App extends React.Component {
   constructor(){
     super()
     this.state = {
@@ -16,7 +16,7 @@ class App extends React.Component {
 
 
   
-  handleChange(id){
+handleChange(id){
   this.setState(prevState =>{
   const updatedState = prevState.todos.map(todo => {
     if (todo.id === id) {
@@ -44,14 +44,4 @@ class App extends React.Component {
     )
   }
 }
-
-// function App(){
-//   const todoComponents = todosData.map(item => <ToDo key={item.id} content={item}/>)
-//   return (
-//     <div className='todo-list'>
-//    {todoComponents}
-//    </div>
-//   );
-// }
-
-export default App ;
+ ;
